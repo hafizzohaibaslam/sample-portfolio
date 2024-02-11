@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.hero {
+    background-image: linear-gradient(to right, #0062E6, #33AEFF);
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about, .projects, .contact, footer {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about, .contact {
+    background-color: #f4f4f4;
+}
+
+
+.about {
+    /* background: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%); */
+    /* padding: 50px; */
+    text-align: center;
+    border-radius: 15px;
+    color: black;
+    width: 90%;
+    margin:auto;
+    margin-top: 30px;
+    /* margin: 40px auto; */
+    /* max-width: 600px; */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.about:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.25);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .about {
+        padding: 30px 20px;
+    }
+}
+
+
+h2 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+
+#work{
+    width: 90%;
+    margin: auto;
+    padding: 30px 0px 30px 0px;
+}
+
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    position: relative;
+    height: 290px;
+    border-radius: 8px;
+    /* overflow: hidden; */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    /* align-items: flex-end;
+    transition: transform 0.3s ease; */
+}
+
+.item-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    color: #fff;
+    padding: 20px;
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+.item:hover .item-content {
+    transform: translateY(0);
+}
+
+.item h3, .item p {
+    margin: 0;
+}
+
+.item h3 {
+    font-size: 1.2rem;
+}
+
+.item p {
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+
+.contact {
+    /* background: linear-gradient(to right, #ff758c 0%, #ff7eb3 100%); */
+    padding: 50px 0;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+    margin: 40px auto;
+    max-width: 600px;
+    background-image: linear-gradient(to right, #0062E6, #33AEFF);
+
+}
+
+.contact h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: black;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-input, .form-textarea {
+    width: calc(100% - 40px); /* Adjusts width considering padding */
+    margin: auto;
+    padding: 15px 20px;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    display: block;
+}
+
+.form-textarea {
+    height: 150px;
+    resize: none; /* Disables resizing to maintain style */
+}
+
+.form-button {
+    background-color: black;
+    color: #ffffff;
+    border: none;
+    padding: 10px 50px;
+    font-size: 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    outline: none;
+    margin-top: 20px;
+}
+
+.form-button:hover {
+    opacity: 0.9;
+}
+
+.form-input:focus, .form-textarea:focus {
+    box-shadow: 0 0 0 2px #fff, 0 0 0 4px #ff8a00; /* Focus style */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .contact {
+        padding: 30px 20px;
+    }
+    .form-input, .form-textarea {
+        width: calc(100% - 40px); /* Adjusts for smaller screens */
+    }
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .projects {
+        grid-template-columns: 1fr;
+    }
+}
